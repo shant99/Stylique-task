@@ -1,0 +1,57 @@
+$color1: #212121;
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin width_height($width , $height){
+    width: $width ;
+    height: $height;
+}
+.randomText{
+    color: $color1;
+    position: absolute;
+    top: 20px;
+}
+.myStartup-container{
+    background-color: white;
+    @include width_height(350px,550px);
+    padding: 24px;
+    .header{
+        font-weight: 700;
+    }
+    .data-item{
+        font-weight: 800;
+        margin-top: 20px;
+    }
+    .data-item-name{
+        display: flex;
+        margin-bottom: 10px;
+        position: relative;
+        .data-item-id{
+            @include width_height(25px,25px);
+            border-radius: 50%;
+            background-color: $color1;
+            color: white;
+            text-align: center;
+            margin-right: 5px;
+            @include center()
+        }
+        .completed{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+    }
+    .subSteps{
+        padding: 10px 0 10px 0;
+        .step{
+            margin-bottom: 10px;
+            color: $color1;
+        }
+        .checkbox{
+            margin-right: 5px;
+        }
+    }
+ 
+}
